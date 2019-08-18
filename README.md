@@ -4,7 +4,13 @@
 
 ## Getting Started
 
-Add as a dependency in your `Package.swift`:
+If you're adding through Xcode's Swift Package Manager integration (Xcode 11 and higher), you can simply use:
+
+```
+https://github.com/chrisaljoudi/swift-log-oslog.git
+```
+
+And use `0.1.0` as the version. If adding as a dependency in your `Package.swift`:
 
 ```swift
 .package(url: "https://github.com/chrisaljoudi/swift-log-oslog.git", .from("0.1.0"))
