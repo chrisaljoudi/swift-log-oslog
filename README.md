@@ -37,3 +37,4 @@ let logger = Logger(label: "com.yourcompany.yourawesomeapp")
 logger.info("Unified Logging is pretty cool.")
 ```
 
+For more details on all the features of the Swift Logging API, check out the [`swift-log`](https://github.com/apple/swift-log) repo.
