@@ -22,7 +22,7 @@ During app startup/initialization:
 
 ```swift
 import Logging
-import LoggingSyslog
+import LoggingOSLog
 
 /// Configure logging system to use OSLog logging backend
 LoggingSystem.bootstrap(LoggingOSLog.init)
