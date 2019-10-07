@@ -14,6 +14,11 @@ public struct LoggingOSLog: LogHandler {
         self.label = label
         self.oslogger = OSLog(subsystem: label, category: "")
     }
+
+    public init(label: String, log: OSLog) {
+        self.label = label
+        self.oslogger = log
+    }
     
     public func log(level: Logger.Level, message: Logger.Message, metadata: Logger.Metadata?, file: String, function: String, line: UInt) {
         var combinedPrettyMetadata = self.prettyMetadata
