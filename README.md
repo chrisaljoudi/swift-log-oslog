@@ -24,11 +24,12 @@ During app startup/initialization:
 import Logging
 import LoggingOSLog
 
-/// Configure logging system to use OSLog logging backend
+/// Configure `swift-log` logging system to use OSLog backend
 LoggingSystem.bootstrap(LoggingOSLog.init)
 ```
 
-Then:
+Then use `swift-log` [per usual](https://github.com/apple/swift-log#lets-log), for example:
+
 ```swift
 let logger = Logger(label: "com.yourcompany.yourawesomeapp")
 
