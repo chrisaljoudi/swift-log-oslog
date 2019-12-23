@@ -1,3 +1,4 @@
+import Foundation
 import Logging
 import os
 
@@ -29,8 +30,8 @@ public struct LoggingOSLog: LogHandler {
         if combinedPrettyMetadata != nil {
             formedMessage += " -- " + combinedPrettyMetadata!
         }
-        if let arg = formedMessage as? CVarArg {
-            os_log("%{public}@", log: self.oslogger, type: OSLogType.from(loggerLevel: level), arg)
+        if let str = formedMessage as? NSString {
+            os_log("%{public}@", log: self.oslogger, type: OSLogType.from(loggerLevel: level), str)
         }
     }
     
