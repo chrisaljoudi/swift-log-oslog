@@ -10,10 +10,10 @@ If you're adding through Xcode's Swift Package Manager integration (Xcode 11 and
 https://github.com/chrisaljoudi/swift-log-oslog.git
 ```
 
-And use `0.1.0` as the version. If adding as a dependency in your `Package.swift`:
+And use `0.2.1` as the base version. If adding as a dependency in your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/chrisaljoudi/swift-log-oslog.git", .from("0.1.0"))
+.package(url: "https://github.com/chrisaljoudi/swift-log-oslog.git", .from("0.2.1"))
 ```
 
 ## Usage
