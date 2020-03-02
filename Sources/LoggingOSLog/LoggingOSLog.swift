@@ -2,10 +2,6 @@ import Foundation
 import Logging
 import os
 
-@available(OSX 10.12, *)
-@available(iOS 10.0, *)
-@available(tvOS 10.0, *)
-@available(watchOS 3.0, *)
 public struct LoggingOSLog: LogHandler {
     public var logLevel: Logger.Level = .info
     public let label: String
@@ -64,10 +60,6 @@ public struct LoggingOSLog: LogHandler {
     }
 }
 
-@available(OSX 10.12, *)
-@available(iOS 10.0, *)
-@available(tvOS 10.0, *)
-@available(watchOS 3.0, *)
 extension OSLogType {
     static func from(loggerLevel: Logger.Level) -> Self {
         switch loggerLevel {
