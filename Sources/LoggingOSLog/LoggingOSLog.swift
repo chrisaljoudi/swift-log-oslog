@@ -1,5 +1,6 @@
 import Foundation
 import Logging
+import struct Logging.Logger
 import os
 
 public struct LoggingOSLog: LogHandler {
@@ -26,9 +27,7 @@ public struct LoggingOSLog: LogHandler {
         if combinedPrettyMetadata != nil {
             formedMessage += " -- " + combinedPrettyMetadata!
         }
-        if let str = formedMessage as? NSString {
-            os_log("%{public}@", log: self.oslogger, type: OSLogType.from(loggerLevel: level), str)
-        }
+        os_log("%{public}@", log: self.oslogger, type: OSLogType.from(loggerLevel: level), formedMessage as NSString)
     }
     
     private var prettyMetadata: String?
