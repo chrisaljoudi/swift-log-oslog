@@ -70,8 +70,9 @@ extension OSLogType {
         case .info:
             return .info
         case .notice:
-            /// `OSLog` doesn't have `notice`, so use `info`
-            return .info
+            // https://developer.apple.com/documentation/os/logging/generating_log_messages_from_your_code
+            // According to the documentation, `default` is `notice`.
+            return .default
         case .warning:
             /// `OSLog` doesn't have `warning`, so use `info`
             return .info
